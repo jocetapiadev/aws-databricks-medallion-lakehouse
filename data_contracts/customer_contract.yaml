@@ -1,0 +1,24 @@
+version: 1.0.0
+dataset: customers
+description: Data Contract para la ingesta, limpieza y anonimización PII en arquitectura Medallion.
+
+schema:
+  - name: customer_id
+    type: string
+    required: true
+    description: Identificador único del cliente
+  - name: email
+    type: string
+    required: true
+    pii: true
+    transformation: sha256_hash
+    description: Correo electrónico del cliente (anonimizado en Silver)
+  - name: created_at
+    type: timestamp
+    required: true
+    description: Fecha y hora de creación del registro
+
+quality_rules:
+  - field: email
+    condition: "contains('@')"
+    action: filter_invalid
