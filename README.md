@@ -12,3 +12,7 @@ Este proyecto implementa un pipeline de datos de extremo a extremo basado en la 
 1. **Bronze (Raw)**: Ingesta de datos en bruto guardando la marca de tiempo (`ingested_at`).
 2. **Silver (Cleaned & PII)**: Filtrado de registros sin correo válido y anonimización de datos sensibles con **SHA-256**.
 3. **Gold (Analytics)**: Agregaciones de negocio optimizadas para tableros de control y BI.
+
+## 🚀 Módulos Avanzados
+* **`dbt_project/`**: Capa semántica centralizada para modelado de métricas Gold.
+* **`scripts/ai_pii_agent.py`**: Agente DataOps de IA para detección dinámica y enmascaramiento de PII.
