@@ -16,3 +16,17 @@ Este proyecto implementa un pipeline de datos de extremo a extremo basado en la 
 ## 🚀 Módulos Avanzados
 * **`dbt_project/`**: Capa semántica centralizada para modelado de métricas Gold.
 * **`scripts/ai_pii_agent.py`**: Agente DataOps de IA para detección dinámica y enmascaramiento de PII.
+
+* ## 📸 Evidencia de la Arquitectura e Integración
+
+### 1. Configuración del Databricks SQL Warehouse
+![SQL Warehouse](docs/01_databricks_warehouse.png)
+
+### 2. Arquitectura Medallion en Catalog (Bronze, Silver, Gold)
+![Tablas Medallion](docs/02_medallion_tables.png)
+
+### 3. Carga y Transformación de Datos en Power Query
+![Power Query](docs/03_powerbi_powerquery.png)
+
+### 4. Dashboard Final en Power BI Service
+![Dashboard Final](docs/04_powerbi_dashboard.png)
